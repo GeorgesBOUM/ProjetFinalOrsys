@@ -2,7 +2,7 @@ package fr.projet.codeclasses;
 
 public class Session {
 	
-	enum Mode{PRESENTIEL, DISTANCIEL}
+	public enum Mode{PRESENTIEL, DISTANCIEL}
 	
 	private String debut;
 	private String fin;
