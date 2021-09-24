@@ -8,10 +8,18 @@ public class Formation {
 	private int nbreHeures;
 	
 	public Formation(String titre, Formateur formateur, double prix, int nbreHeures) throws IllegalArgumentException{
-		this.titre = titre;
-		this.formateur = formateur;
-		this.prix = prix;
-		this.nbreHeures = nbreHeures;
+		if (titre.length() < 3) {
+			throw new IllegalArgumentException("titre ayant moins de trois caractères");
+		} else if (prix <= 100) {
+			throw new IllegalArgumentException("prix <= 100");
+		} else if (nbreHeures <= 10) {
+			throw new IllegalArgumentException("Nombre d'heures <= 10");
+		} else {
+			this.titre = titre;
+			this.formateur = formateur;
+			this.prix = prix;
+			this.nbreHeures = nbreHeures;
+		}
 	}
 
 	public String getTitre() {
