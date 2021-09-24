@@ -6,12 +6,15 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import fr.projet.codeclasses.Session;
+import fr.projet.codeclasses.Session.Mode;
+
 public class TestSession {
 	private Session s;
 
 	@Before
 	public void setUp() throws Exception {
-		s = new Session();
+		s = new Session("05/07/21", "24/09/21", "titre", "orsys", Mode.DISTANCIEL);
 	}
 
 	@After
@@ -20,8 +23,7 @@ public class TestSession {
 
 	@Test
 	public void testMode() {
-		fail("Not yet implemented");
-		//tester que le mode ne peut être que "presentiel" ou "en ligne"
+		assertTrue("mode distanciel", s.getMode() == Mode.DISTANCIEL);
 	}
 
 }
