@@ -2,7 +2,7 @@ package fr.projet.codeclasses;
 
 public class Formateur {
 	
-	enum Grade {JUNIOR, SENIOR, EXPERT}
+	public enum Grade {JUNIOR, SENIOR, EXPERT}
 	
 	private String nom;
 	private String prenom;
