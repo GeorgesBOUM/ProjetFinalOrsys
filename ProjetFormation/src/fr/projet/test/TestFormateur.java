@@ -1,17 +1,21 @@
 package fr.projet.test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import fr.projet.codeclasses.Formateur;
+import fr.projet.codeclasses.Formateur.Grade;
+
 public class TestFormateur {
-	private Formateur f;
+	private Formateur f1;
 	
 	@Before
 	public void setUp() throws Exception {
-		f = new Formateur();
+		f1 = new Formateur("nom", "prenom", "specialité", Grade.JUNIOR );
 	}
 
 	@After
@@ -19,9 +23,8 @@ public class TestFormateur {
 	}
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
-		// tester que Formateur grade ne peut être que [junior ,senior, expert]
+	public void testGrade() {
+		assertTrue("Formateur Junior", f1.getGrade() == Grade.JUNIOR);
 	}
 
 }
