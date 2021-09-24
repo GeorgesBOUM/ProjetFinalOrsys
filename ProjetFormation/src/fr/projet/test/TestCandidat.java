@@ -10,11 +10,11 @@ import jdk.internal.org.jline.reader.Candidate;
 
 public class TestCandidat {
 	
-	Candidat c;
+	private Candidat c;
 
 	@Before
 	public void setUp() throws Exception {
-		C = new Candidate(null);
+		c = new Candidate(null);
 	}
 
 	@After
