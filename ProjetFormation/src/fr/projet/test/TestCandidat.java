@@ -1,12 +1,12 @@
 package fr.projet.test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import jdk.internal.org.jline.reader.Candidate;
+import fr.projet.codeclasses.Candidat;
 
 public class TestCandidat {
 	
@@ -14,7 +14,7 @@ public class TestCandidat {
 
 	@Before
 	public void setUp() throws Exception {
-		c = new Candidate(null);
+		c = new Candidat(0, "nom", "departement");
 	}
 
 	@After
@@ -22,8 +22,13 @@ public class TestCandidat {
 	}
 
 	@Test
-	public void testId() {
-		assertTrue("id numérique", c.getId() > 0);
+	public void testIdIncorrect() {
+		assertTrue("id incorrect", c.getId() <= 0);
+	}
+	
+	@Test
+	public void testIdCorrect() {
+		assertTrue("id correct", c.getId() > 0);
 	}
 
 }
