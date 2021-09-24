@@ -10,11 +10,12 @@ import fr.projet.codeclasses.Candidat;
 
 public class TestCandidat {
 	
-	private Candidat c;
+	private Candidat c1,c2;
 
 	@Before
 	public void setUp() throws Exception {
-		c = new Candidat(0, "nom", "departement");
+		c1 = new Candidat(0, "nom", "departement");
+		c2 = new Candidat(3, "nom", "departement");
 	}
 
 	@After
@@ -23,12 +24,12 @@ public class TestCandidat {
 
 	@Test
 	public void testIdIncorrect() {
-		assertTrue("id incorrect", c.getId() <= 0);
+		assertTrue("id incorrect", c1.getId() <= 0);
 	}
 	
 	@Test
 	public void testIdCorrect() {
-		assertTrue("id correct", c.getId() > 0);
+		assertTrue("id correct", c2.getId() > 0);
 	}
 
 }
