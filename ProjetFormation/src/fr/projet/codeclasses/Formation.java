@@ -7,7 +7,7 @@ public class Formation {
 	private double prix;
 	private int nbreHeures;
 	
-	public Formation(String titre, Formateur formateur, double prix, int nbreHeures) {
+	public Formation(String titre, Formateur formateur, double prix, int nbreHeures) throws IllegalArgumentException{
 		this.titre = titre;
 		this.formateur = formateur;
 		this.prix = prix;
