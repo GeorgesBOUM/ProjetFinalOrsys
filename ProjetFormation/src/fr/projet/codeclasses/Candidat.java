@@ -6,9 +6,13 @@ public class Candidat {
 	private String departement;
 	
 	public Candidat(int id, String name, String departement) throws IllegalArgumentException {
-		this.id = id;
-		this.name = name;
-		this.departement = departement;
+		if (id <= 0) {
+			throw new IllegalArgumentException("id <= 0");
+		} else {
+			this.id = id;
+			this.name = name;
+			this.departement = departement;
+		}
 	}
 
 	public int getId() {
