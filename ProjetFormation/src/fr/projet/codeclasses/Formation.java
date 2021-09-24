@@ -45,6 +45,18 @@ public class Formation {
 	public void setNbreHeures(int nbreHeures) {
 		this.nbreHeures = nbreHeures;
 	}
+	
+	public boolean titreValide() {
+		return this.titre.length() > 3;
+	}
+	
+	public boolean prixValide() {
+		return this.prix > 100;
+	}
+	
+	public boolean nbreHeuresValide() {
+		return this.nbreHeures > 10;
+	}
 
 	@Override
 	public String toString() {
